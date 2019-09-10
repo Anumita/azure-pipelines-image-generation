@@ -17,6 +17,7 @@ if [[ -z $OPA_VERSION ]] || ! [[ "$OPA_VERSION" =~ (v[0-9]+\.[0-9]+\.[0-9]+)$ ]]
 fi
 
 curl -L -o /usr/local/bin/opa "https://github.com/open-policy-agent/opa/releases/download/${OPA_VERSION}/opa_linux_amd64"
+chmod +x /usr/local/bin/opa
 
 # Run tests to determine that the software installed as expected
 echo "Testing to make sure that script performed as expected, and basic scenarios work"
