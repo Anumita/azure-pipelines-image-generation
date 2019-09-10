@@ -13,6 +13,7 @@ source $HELPER_SCRIPTS/apt.sh
 KIND_VERSION="v0.5.1"
 
 curl -L -o /usr/local/bin/kind "https://github.com/kubernetes-sigs/kind/releases/download/${KIND_VERSION}/kind-linux-amd64"
+chmod +x /usr/local/bin/kind
 
 # Run tests to determine that the software installed as expected
 echo "Testing to make sure that script performed as expected, and basic scenarios work"
