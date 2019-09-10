@@ -519,6 +519,12 @@
             ]
         },
         {
+            "type": "powershell",
+            "scripts":[
+                "{{ template_dir }}/scripts/Installers/Install-OpenPolicyAgent.ps1"
+            ]
+        },
+        {
             "type": "windows-restart",
             "restart_timeout": "30m"
         },
@@ -744,6 +750,11 @@
             "type": "powershell",
             "scripts":[
                 "{{ template_dir }}/scripts/Installers/Validate-Vcpkg.ps1"
+            ]
+        },
+        {
+            "scripts":[
+                "{{ template_dir }}/scripts/Installers/Validate-OpenPolicyAgent.ps1"
             ]
         },
         {

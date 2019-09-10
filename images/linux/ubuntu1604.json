@@ -144,6 +144,7 @@
                 "{{template_dir}}/scripts/installers/mono.sh",
                 "{{template_dir}}/scripts/installers/mysql.sh",
                 "{{template_dir}}/scripts/installers/nodejs.sh",
+                "{{template_dir}}/scripts/installers/open-policy-agent.sh",
                 "{{template_dir}}/scripts/installers/phantomjs.sh",
                 "{{template_dir}}/scripts/installers/1604/php.sh",
                 "{{template_dir}}/scripts/installers/pollinate.sh",
