@@ -23,7 +23,7 @@ try
     if ($exitCode -eq 0 -or $exitCode -eq 3010)
     {
         Write-Host -Object 'Installation successful'
-        Add-MachinePathItem $outFilePath
+        Add-MachinePathItem $destFilePath
         exit $exitCode
     }
     else
