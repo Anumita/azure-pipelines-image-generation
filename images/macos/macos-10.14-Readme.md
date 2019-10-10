@@ -2,17 +2,15 @@
 
 The following software is installed on machines in the Azure Pipelines **macOS-10.14** VM image ('Hosted macOS' pool).
 
-## Image Changes
+## Upcoming Image Changes
 
-The following Java versions are available on the VM image: 7, 8, 11, 12. Java 9 and 10 were deprecated.
+- Xcode 11.1 will be set as default in next two weeks
 
-Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overloaded by complex licensing, end-user restrictions, and lack of long-term support. In this image change, we replaced the JDKs with tested, certified, LTS builds of OpenJDK from Azul Systems. Java developers can now build and run production Java applications using Azul Systems Zulu Enterprise builds of OpenJDK without incurring additional support costs. This new offering is designed to make Microsoft hosted Java builds and deployments worry-free by incorporating quarterly security updates and bug fixes as well as critical out-of-band updates and patches as needed.
-
-#### Xcode 10.2.1 set by default
+#### Xcode 10.3 set by default
 
 ## Operating System
 
-- OS X 10.14.6 (18G87) **Mojave**
+- OS X 10.14.6 (18G103) **Mojave**
 
 ## Installed Software
 
@@ -22,52 +20,53 @@ Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overl
 - Java 1.8: OpenJDK RE (Zulu 8.40.0.25-CA-macosx) (build 1.8.0_222-b10) (default)
 - Java 11: OpenJDK RE (Zulu11.33+15-CA) (build 11.0.4+11-LTS)
 - Java 12: OpenJDK RE (Zulu12.3+11-CA) (build 12.0.2+3)
+- Java 13: OpenJDK Runtime Environment (Zulu13.27+9-CA) (build 13+33)
 - Node.js 6.17.0
 - NVM 0.33.11
 - NVM - Installed node versions:
 	v6.17.1
 	v8.16.1
 	v10.16.3
-	v12.9.0
-- PowerShell 6.2.2
+	v12.11.1
+- PowerShell 6.2.3
 - Python 2.7.16
 - Python 3.7.4
-- Ruby 2.6.3p62
+- Ruby 2.6.4p104
 - .NET Core SDK 1.0.1 1.0.4 1.1.10 1.1.11 1.1.12 1.1.13 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.12.9
+- Go 1.13.1
 
 
 ### Package Management
 
 - Bundler 2.0.2
 - Carthage 0.33.0
-- CocoaPods 1.7.5
-- Homebrew 2.1.10
+- CocoaPods 1.8.1
+- Homebrew 2.1.11
 - NPM 3.10.10
-- Yarn 1.17.3
+- Yarn 1.19.0
 - NuGet 4.7.0.5148
 - pip 19.1.1
 - Miniconda 4.7.10
 
 ### Project Management
 
-- Apache Maven 3.6.1
-- Gradle 5.6
+- Apache Maven 3.6.2
+- Gradle 5.6.2
 
 ### Utilities
 
-- curl 7.65.3 (libcurl/7.64.1 SecureTransport zlib/1.2.11)
+- curl 7.66.0 (libcurl/7.66.0 SecureTransport zlib/1.2.11)
 - Git 2.23.0
 - Git LFS 2.8.0
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.12.2
-- GNU parallel 20190722
+- GNU parallel 20190822
 
 ### Tools
 
-- fastlane 2.129.0
+- fastlane 2.132.0
 - App Center CLI 1.2.2
-- Azure-CLI 2.0.71
+- Azure-CLI 2.0.74
 
 ### Pre-cached tools
 
@@ -89,7 +88,8 @@ Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overl
 
 | Version                | Build   | Path                            |
 |------------------------|---------|---------------------------------|
-| 11_beta 6              | 11M392q | /Applications/Xcode_11.app      |
+| 11.1                   | 11A1027 | /Applications/Xcode_11.1.app      |
+| 11.0                   | 11A420a | /Applications/Xcode_11.app      |
 | 10.3                   | 10G8    | /Applications/Xcode_10.3.app    |
 | 10.2.1                 | 10E1001 | /Applications/Xcode_10.2.1.app  |
 | 10.2                   | 10E125  | /Applications/Xcode_10.2.app    |
@@ -103,7 +103,7 @@ Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overl
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.6
-- xcversion 2.6.0
+- xcversion 2.6.1
 
 ### Installed SDKs
 
@@ -111,44 +111,46 @@ Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overl
 |---------------------------|-------------|--------------|
 | macOS 10.13               | macosx10.13 | 9.4.1        |
 | macOS 10.14               | macosx10.14 | 10.0, 10.1, 10.2, 10.2.1, 10.3 |
-| macOS 10.15               | macosx10.15 | 11.0         |
+| macOS 10.15               | macosx10.15 | 11.0, 11.1   |
 | iOS 11.4                  | iphoneos11.4 | 9.4.1       |
 | iOS 12.0                  | iphoneos12.0 | 10.0        |
 | iOS 12.1                  | iphoneos12.1 | 10.1        |
 | iOS 12.2                  | iphoneos12.2 | 10.2, 10.2.1|
 | iOS 12.4                  | iphoneos12.4 | 10.3        |
 | iOS 13.0                  | iphoneos13.0 | 11.0        |
+| iOS 13.1                  | iphoneos13.1 | 11.1        |
 | iOS Simulator 11.4        | iphonesimulator11.4 | 9.4.1    |
 | iOS Simulator 12.0        | iphonesimulator12.0 | 10.0     |
 | iOS Simulator 12.1        | iphonesimulator12.1 | 10.1     |
 | iOS Simulator 12.2        | iphonesimulator12.2 | 10.2, 10.2.1 |
 | iOS Simulator 12.4        | iphonesimulator12.4 | 10.3     |
 | iOS Simulator 13.0        | iphonesimulator13.0 | 11.0     |
+| iOS Simulator 13.1        | iphonesimulator13.1 | 11.1     |
 | tvOS 11.4                 | appletvos11.4 | 9.4.1          |
 | tvOS 12.0                 | appletvos12.0 | 10.0           |
 | tvOS 12.1                 | appletvos12.1 | 10.1           |
 | tvOS 12.2                 | appletvos12.2 | 10.2, 10.2.1   |
 | tvOS 12.4                 | appletvos12.4 | 10.3           |
-| tvOS 13.0                 | appletvos13.0 | 11.0           |
+| tvOS 13.0                 | appletvos13.0 | 11.0, 11.1     |
 | tvOS Simulator 11.4       | appletvsimulator11.4 | 9.4.1   |
 | tvOS Simulator 12.0       | appletvsimulator12.0 | 10.0    |
 | tvOS Simulator 12.1       | appletvsimulator12.1 | 10.1    |
 | tvOS Simulator 12.2       | appletvsimulator12.2 | 10.2, 10.2.1 |
 | tvOS Simulator 12.4       | appletvsimulator12.4 | 10.3    |
-| tvOS Simulator 13.0       | appletvsimulator13.0 | 11.0    |
+| tvOS Simulator 13.0       | appletvsimulator13.0 | 11.0, 11.1 |
 | watchOS 4.3               | watchos4.3 | 9.4.1         |
 | watchOS 5.0               | watchos5.0 | 10.0          |
 | watchOS 5.1               | watchos5.1 | 10.1          |
 | watchOS 5.2               | watchos5.2 | 10.2, 10.2.1  |
 | watchOS 5.3               | watchos5.3 | 10.3          |
-| watchOS 6.0               | watchos6.0 | 11.0          |
+| watchOS 6.0               | watchos6.0 | 11.0, 11.1    |
 | watchOS Simulator 4.3     | watchsimulator4.3 | 9.4.1         |
 | watchOS Simulator 5.0     | watchsimulator5.0 | 10.0          |
 | watchOS Simulator 5.1     | watchsimulator5.1 | 10.1          |
 | watchOS Simulator 5.2     | watchsimulator5.2 | 10.2, 10.2.1  |
 | watchOS Simulator 5.3     | watchsimulator5.3 | 10.3          |
-| watchOS Simulator 6.0     | watchsimulator6.0 | 11.0          |
-| DriverKit 19.0            | driverkit.macosx19.0 | 11.0       |
+| watchOS Simulator 6.0     | watchsimulator6.0 | 11.0, 11.1    |
+| DriverKit 19.0            | driverkit.macosx19.0 | 11.0, 11.1 |
 
 ### Installed Simulators
 
@@ -156,19 +158,21 @@ Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overl
 
 | OS      | Xcode Version                   | Simulators |
 |---------|---------------------------------|------------|
-| iOS 8.4 (12H141) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1 | iPhone 4s<br>iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPad 2<br>iPad Retina<br>iPad Air |
-| iOS 9.0 (13A344) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1 | iPhone 4s<br>iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPad 2<br>iPad Retina<br>iPad Air<br>iPad Air 2 |
-| iOS 9.1 (13B143)<br>iOS 9.2 (13C75)<br>iOS 9.3 (13E233) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1 | iPhone 4s<br>iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPad 2<br>iPad Retina<br>iPad Air<br>iPad Air 2<br>iPad Pro |
-| iOS 10.0 (14A345) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1 | iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7 inch)<br>iPad Pro (12.9 inch) |
-| iOS 10.1 (14B72)<br>iOS 10.2 (14C89) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1 | iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7 inch)<br>iPad Pro (12.9 inch) |
+| iOS 8.4 (12H141) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1, 11, 11.1 | iPhone 4s<br>iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPad 2<br>iPad Retina<br>iPad Air |
+| iOS 9.0 (13A344) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1, 11, 11.1 | iPhone 4s<br>iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPad 2<br>iPad Retina<br>iPad Air<br>iPad Air 2 |
+| iOS 9.1 (13B143)<br>iOS 9.2 (13C75)<br>iOS 9.3 (13E233) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1, 11, 11.1 | iPhone 4s<br>iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPad 2<br>iPad Retina<br>iPad Air<br>iPad Air 2<br>iPad Pro |
+| iOS 10.0 (14A345) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1, 11, 11.1 | iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7 inch)<br>iPad Pro (12.9 inch) |
+| iOS 10.1 (14B72)<br>iOS 10.2 (14C89) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1, 11, 11.1 | iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7 inch)<br>iPad Pro (12.9 inch) |
 | iOS 11.4 (15F79) | 9.4.1 | iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPad Air<br>iPad Air 2<br>iPad (5th generation)<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch) |
 | iOS 12.0 (16A5288q) | 10.0 | iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone XR<br>iPhone XS<br>iPhone XS Max<br>iPad Air<br>iPad Air 2<br>iPad (5th generation)<br>iPad Pro (9.7-inch)<br>iPad Pro (10.5-inch)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad (6th generation) |
 | iOS 12.1 (16B91) | 10.1 | iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone X<br>iPhone XS<br>iPhone XS Max<br>iPhone XR<br>iPad Air<br>iPad Air 2<br>iPad (5th generation)<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation) |
 | iOS 12.2 (16E226)<br>iOS 12.4 (16G73) | 10.2, 10.2.1<br>10.3  | iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone X<br>iPhone XS<br>iPhone XS Max<br>iPhone XR<br>iPad Air<br>iPad Air 2<br>iPad Air (3rd generation)<br>iPad mini 2<br>iPad mini 3<br>iPad mini 4<br>iPad mini (5th generation)<br>iPad (5th generation)<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation) |
-| iOS 13.0 (17A5547d) | 11.0          | iPhone 8<br>iPhone 8 Plus<br>iPhone Xs<br>iPhone Xs Max<br>iPhone XR<br>iPad Pro (9.7-inch)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd<br>iPad Air (3rd generation) |
-| tvOS 11.4 (15L576)<br>tvOS 12.0 (16J5283n)<br>tvOS 12.1 (16J602)<br>tvOS 12.2 (16L225)<br>tvOS 12.4 (16M567)<br>tvOS 13.0 (17J5540d) | 9.4.1<br>10.0<br>10.1<br>10.2, 10.2.1<br>10.3<br>11.0         | Apple TV<br>Apple TV 4K<br>Apple TV 4K (at 1080p) |
+| iOS 13.0 (17A577a) | 11         | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
+| iOS 13.1 (17A844) | 11.1        | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
+| tvOS 11.4 (15L576)<br>tvOS 12.0 (16J5283n)<br>tvOS 12.1 (16J602)<br>tvOS 12.2 (16L225)<br>tvOS 12.4 (16M567)<br>tvOS 13.0 (17J559) | 9.4.1<br>10.0<br>10.1<br>10.2, 10.2.1<br>10.3<br>11.0<br>11.1        | Apple TV<br>Apple TV 4K<br>Apple TV 4K (at 1080p) |
 | watchOS 4.3 (15T212) | 9.4.1        | Apple Watch 38mm<br>Apple Watch 42mm<br>Apple Watch Series 2 38mm<br>Apple Watch Series 2 42mm<br>Apple Watch Series 3 38mm<br>Apple Watch Series 3 42mm |
-| watchOS 5.0 (16R5283q)<br>watchOS 5.1 (16R591)<br>watchOS 5.2 (16T224)<br>watchOS 5.3 (16U567)<br>watchOS 6.0 (17R5546d) | 10.0<br>10.1<br>10.2, 10.2.1<br>10.3<br>11.0       | Apple Watch Series 2 38mm<br>Apple Watch Series 2 42mm<br>Apple Watch Series 3 38mm<br>Apple Watch Series 3 42mm<br>Apple Watch Series 4 40mm<br>Apple Watch Series 4 44mm |
+| watchOS 5.0 (16R5283q)<br>watchOS 5.1 (16R591)<br>watchOS 5.2 (16T224)<br>watchOS 5.3 (16U567) | 10.0<br>10.1<br>10.2, 10.2.1<br>10.3      | Apple Watch Series 2 38mm<br>Apple Watch Series 2 42mm<br>Apple Watch Series 3 38mm<br>Apple Watch Series 3 42mm<br>Apple Watch Series 4 40mm<br>Apple Watch Series 4 44mm |
+| watchOS 6.0 (17R566) | 11.0<br>11.1       | Apple Watch Series 4 40mm<br>Apple Watch Series 4 44mm<br>Apple Watch Series 5 40mm<br>Apple Watch Series 5 44mm |
 
 #### How to install additional simulators?
 Image contains only default simulators for each Xcode version. To install a specific simulator for all Xcode version, use xcversion tool:
@@ -179,16 +183,18 @@ xcversion simulators --install='iOS 8.4'
 
 ### Device Pairs
 
-| Watch                       | Phone          |
-|-----------------------------|----------------|
-| Apple Watch - 38mm          | iPhone 6s      |
-| Apple Watch - 42mm          | iPhone 6s Plus |
-| Apple Watch Series 2 - 38mm | iPhone 7       |
-| Apple Watch Series 2 - 42mm | iPhone 7 Plus  |
-| Apple Watch Series 3 - 38mm | iPhone 8       |
-| Apple Watch Series 3 - 42mm | iPhone 8 Plus  |
-| Apple Watch Series 4 - 40mm | iPhone XS      |
-| Apple Watch Series 4 - 44mm | iPhone XS Max  |
+| Watch                       | Phone             |
+|-----------------------------|-------------------|
+| Apple Watch - 38mm          | iPhone 6s         |
+| Apple Watch - 42mm          | iPhone 6s Plus    |
+| Apple Watch Series 2 - 38mm | iPhone 7          |
+| Apple Watch Series 2 - 42mm | iPhone 7 Plus     |
+| Apple Watch Series 3 - 38mm | iPhone 8          |
+| Apple Watch Series 3 - 42mm | iPhone 8 Plus     |
+| Apple Watch Series 4 - 40mm | iPhone XS         |
+| Apple Watch Series 4 - 44mm | iPhone XS Max     |
+| Apple Watch Series 5 - 40mm | iPhone 11 Pro     |
+| Apple Watch Series 5 - 44mm | iPhone 11 Pro Max |
 
 ## Android
 
@@ -202,7 +208,7 @@ xcversion simulators --install='iOS 8.4'
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 29.0.2 |
+| platform-tools        | Android SDK Platform-tools, revision 29.0.4 |
 
 ### Android SDK Platforms
 
@@ -222,7 +228,7 @@ xcversion simulators --install='iOS 8.4'
 | android-26            | Android SDK Platform 26, Revision 2       |
 | android-27            | Android SDK Platform 27, Revision 3       |
 | android-28            | Android SDK Platform 28, Revision 6       |
-| android-29            | Android SDK Platform 29, Revision 1       |
+| android-29            | Android SDK Platform 29, Revision 3       |
 
 ### Android SDK Build-tools
 
@@ -267,7 +273,7 @@ xcversion simulators --install='iOS 8.4'
 | lldb                  | 2.3.3614996                               |
 | ndk-bundle            | 18.1.5063045                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 29.0.11                                   |
+| Android Emulator      | 29.2.1                                    |
 
 ### Google APIs
 
@@ -291,11 +297,12 @@ xcversion simulators --install='iOS 8.4'
 
 ### Visual Studio for Mac
 
-- 8.2.4.17
+- 8.3.1.18
 
 
 ### Mono
 
+- 6.4.0
 - 6.0.0
 - 5.18.1
 - 5.16.1
@@ -311,6 +318,7 @@ xcversion simulators --install='iOS 8.4'
 
 ### Xamarin.iOS SDK
 
+- 13.2.0.42
 - 12.14.0.114
 - 12.10.0.157
 - 12.8.0.2
@@ -331,6 +339,7 @@ xcversion simulators --install='iOS 8.4'
 
 ### Xamarin.Android SDK
 
+- 10.0.0.43
 - 9.4.1.0
 - 9.3.0-23
 - 9.2.3-0
@@ -348,7 +357,8 @@ xcversion simulators --install='iOS 8.4'
 
 ### Xamarin.Mac SDK
 
-- 5.16.0.5
+- 6.2.0.42
+- 5.16.1.24
 - 5.10.0.157
 - 5.8.0.0
 - 5.6.0.25

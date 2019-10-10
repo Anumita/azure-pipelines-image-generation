@@ -2,18 +2,11 @@
 
 The following software is installed on machines in the Azure Pipelines **macOS-10.13** VM image ('Hosted macOS High Sierra' pool).
 
-## Image Changes
-
-The following Java versions are available on the VM image: 7, 8, 11, 12.
-	Java 9 and 10 were deprecated.
-
-Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overloaded by complex licensing, end-user restrictions, and lack of long-term support. In this image change, we replaced the JDKs with tested, certified, LTS builds of OpenJDK from Azul Systems. Java developers can now build and run production Java applications using Azul Systems Zulu Enterprise builds of OpenJDK without incurring additional support costs. This new offering is designed to make Microsoft hosted Java builds and deployments worry-free by incorporating quarterly security updates and bug fixes as well as critical out-of-band updates and patches as needed.
-
 #### Xcode 10.1 set by default
 
 ## Operating System
 
-- OS X 10.13.6 (17G8030) **High Sierra**
+- OS X 10.13.6 (17G8037) **High Sierra**
 
 ## Installed Software
 
@@ -23,28 +16,29 @@ Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overl
 - Java 1.8: OpenJDK RE (Zulu 8.40.0.25-CA-macosx) (build 1.8.0_222-b10) (default)
 - Java 11: OpenJDK RE Zulu11.33+15-CA (build 11.0.4+11-LTS)
 - Java 12: OpenJDK RE Zulu12.3+11-CA (build 12.0.2+3)
+- java 13 : OpenJDK RE Zulu13.27+9-CA (build 13+33)
 - Node.js 6.17.0
 - NVM 0.33.11
 - NVM - Installed node versions:
 	v6.17.1
 	v8.16.1
 	v10.16.3
-	v12.9.0
-- PowerShell 6.2.2
+	v12.11.1
+- PowerShell 6.2.3
 - Python 2.7.16
 - Python 3.7.4
-- Ruby 2.6.3p62
+- Ruby 2.6.5p114
 - .NET Core SDK 1.0.1, 1.0.4, 1.1.4, 1.1.5, 1.1.7, 1.1.8, 1.1.9, 1.1.10, 1.1.11, 1.1.12, 1.1.13, 2.0.0, 2.0.3, 2.1.100, 2.1.101, 2.1.102, 2.1.103, 2.1.104, 2.1.105, 2.1.503, 2.1.504, 2.1.505, 2.1.2, 2.1.200, 2.1.201, 2.1.300, 2.1.301, 2.1.4, 2.1.400, 2.1.401 2.1.402 2.1.502, 2.1.504, 2.2.101, 2.2.102, 2.2.103, 2.2.104, 2.2.105
-- Go 1.12.9
+- Go 1.13.1
 
 ### Package Management
 
 - Bundler 2.0.2
 - Carthage 0.33.0
-- CocoaPods 1.7.5
-- Homebrew 2.1.10
+- CocoaPods 1.8.1
+- Homebrew 2.1.11
 - NPM 3.10.10
-- Yarn 1.17.3
+- Yarn 1.19.0
 - NuGet 4.7.0.5148
 - pip 19.1.1(python 2.7)
 - pip 19.1.1(python 3.7)
@@ -52,23 +46,23 @@ Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overl
 
 ### Project Management
 
-- Apache Maven 3.6.1
-- Gradle 5.6
+- Apache Maven 3.6.2
+- Gradle 5.6.2
 
 ### Utilities
 
-- curl 7.65.3 (libcurl/7.65.3 SecureTransport zlib/1.2.11)
+- curl 7.66.0 (x86_64-apple-darwin17.7.0) libcurl/7.66.0 SecureTransport zlib/1.2.11
 - Git 2.23.0
 - Git LFS 2.8.0
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.12.2
-- GNU parallel 20190722
+- GNU parallel 20190822
 
 ### Tools
 
-- fastlane 2.129.0
+- fastlane 2.133.0
 - App Center CLI 1.2.2
-- Azure-CLI 2.0.71
+- Azure-CLI 2.0.74
 
 ### Pre-cached tools
 - Python (available through the [Use Python Version](https://go.microsoft.com/fwlink/?linkid=871498) task)
@@ -102,11 +96,11 @@ Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overl
 
 ### Xcode Support Tools
 
-- Nomad CLI 3.0.3
+- Nomad CLI 3.0.6
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.5
-- xcversion 2.6.0
+- xcversion 2.6.1
 
 ### Installed SDKs
 | SDK                       | SDK name    | Xcode Version |
@@ -229,7 +223,7 @@ xcversion simulators --install='iOS 8.4'
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 29.0.2 |
+| platform-tools        | Android SDK Platform-tools, revision 29.0.4 |
 
 ### Android SDK Platforms
 
@@ -249,7 +243,7 @@ xcversion simulators --install='iOS 8.4'
 | android-26            | Android SDK Platform 26, Revision 2       |
 | android-27            | Android SDK Platform 27, Revision 3       |
 | android-28            | Android SDK Platform 28, Revision 6       |
-| android-29            | Android SDK Platform 29, Revision 1       |
+| android-29            | Android SDK Platform 29, Revision 3       |
 
 ### Android SDK Build-tools
 
@@ -294,7 +288,7 @@ xcversion simulators --install='iOS 8.4'
 | lldb                  | 3.1.4508709                               |
 | ndk-bundle            | 18.1.5063045                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 29.0.11                                   |
+| Android Emulator      | 29.2.1                                    |
 
 ### Google APIs
 
@@ -318,10 +312,11 @@ xcversion simulators --install='iOS 8.4'
 
 ### Visual Studio for Mac
 
-- 8.2.4.17
+- 8.3.1.18
 
 ### Mono
 
+- 6.4.0
 - 6.0.0
 - 5.18.1
 - 5.16.1
@@ -337,6 +332,7 @@ xcversion simulators --install='iOS 8.4'
 
 ### Xamarin.iOS SDK
 
+- 13.2.0.42
 - 12.14.0.114
 - 12.8.0.2
 - 12.6.0.25
@@ -356,6 +352,7 @@ xcversion simulators --install='iOS 8.4'
 
 ### Xamarin.Android SDK
 
+- 10.0.0.43
 - 9.4.1.0
 - 9.3.0-23
 - 9.2.3-0
@@ -373,7 +370,8 @@ xcversion simulators --install='iOS 8.4'
 
 ### Xamarin.Mac SDK
 
-- 5.16.0.5
+- 6.2.0.42
+- 5.16.1.24
 - 5.8.0.0
 - 5.6.0.25
 - 5.3.1.28

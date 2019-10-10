@@ -10,9 +10,9 @@ source $HELPER_SCRIPTS/document.sh
 source $HELPER_SCRIPTS/apt.sh
 
 # Set env variable for SDK Root (https://developer.android.com/studio/command-line/variables)
-ANDROID_ROOT=/usr/local/lib/android
-ANDROID_SDK_ROOT=${ANDROID_ROOT}/sdk
-echo "ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT}" | tee -a /etc/environment
+    ANDROID_ROOT=/usr/local/lib/android
+    ANDROID_SDK_ROOT=${ANDROID_ROOT}/sdk
+    echo "ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT}" | tee -a /etc/environment
 
 # ANDROID_HOME is deprecated, but older versions of Gradle rely on it
 echo "ANDROID_HOME=${ANDROID_SDK_ROOT}" | tee -a /etc/environment
@@ -40,8 +40,8 @@ echo "y" | ${ANDROID_ROOT}/tools/bin/sdkmanager --sdk_root=${ANDROID_SDK_ROOT} \
     "platforms;android-17" \
     "platforms;android-15" \
     "platforms;android-10" \
-    "build-tools:29.0.2" \
-    "build-tools:29.0.0" \
+    "build-tools;29.0.2" \
+    "build-tools;29.0.0" \
     "build-tools;28.0.3" \
     "build-tools;28.0.2" \
     "build-tools;28.0.1" \
@@ -143,4 +143,4 @@ DocumentInstalledItem "Android SDK Build-Tools 19.1.0"
 DocumentInstalledItem "Android SDK Build-Tools 17.0.0"
 DocumentInstalledItem "Android NDK $(cat ${ANDROID_SDK_ROOT}/ndk-bundle/source.properties 2>&1 | grep Pkg.Revision | cut -d ' ' -f 3)"
 DocumentInstalledItem "Android ConstraintLayout 1.0.2"
-DocumentInstalledItem "Android ConstraintLayour 1.0.1"
+DocumentInstalledItem "Android ConstraintLayout 1.0.1"
